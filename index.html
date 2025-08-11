@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Disclaimer - bhaiappbnale</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fafafa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      max-width: 600px;
+      padding: 2rem 2.5rem;
+      margin: 2rem;
+      text-align: left;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #405de6;
+      letter-spacing: 1px;
+    }
+    .insta-link {
+      display: inline-block;
+      margin-bottom: 1.2rem;
+      color: #405de6;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .insta-link:hover {
+      text-decoration: underline;
+    }
+    .disclaimer {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      white-space: pre-line;
+    }
+    .hashtags {
+      color: #8e8e8e;
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+    .copy-btn {
+      background: #405de6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .copy-btn:hover {
+      background: #2d3ca7;
+    }
+    .copied-msg {
+      color: #27ae60;
+      font-size: 0.98rem;
+      margin-left: 0.7rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Disclaimer</h1>
+    <a class="insta-link" href="https://www.instagram.com/bhaiappbnale/" target="_blank">@bhaiappbnale on Instagram</a>
+    <div class="disclaimer" id="disclaimerText">
+The content presented on the "bhaiappbnale" Instagram page—including posts, videos, reels, stories, captions, and all scripts or character portrayals—is intended solely for entertainment, humor, and educational purposes. All dialogues, scenarios, and characters (including fictionalized versions of public figures) are used in a satirical and playful manner.
+
+Any resemblance to real persons—living or deceased—is unintentional or purely coincidental, and is used for the purpose of parody, humor, and creative expression only. We do not claim to represent, impersonate, or speak on behalf of any real individuals, celebrities, public figures, or organizations.
+
+No disrespect, harm, or offense is intended toward any individual, group, community, religion, profession, or organization. If any person or entity feels misrepresented or uncomfortable with any content, please contact us directly for clarification or resolution.
+
+The information offered (including tips/stories about internships, finance, career, technology, or lifestyle) is not professional advice. Viewers should do their own research or consult qualified professionals before making personal, educational, or financial decisions. The creators of this page do not accept any liability or responsibility for actions taken based on this content.
+
+Participation through comments or other engagement does not establish any type of client relationship. All content is subject to copyright and should not be reproduced without permission.
+    </div>
+    <div class="hashtags">#EntertainmentOnly #Satire #Parody #NoHarmIntended</div>
+    <button class="copy-btn" onclick="copyDisclaimer()">Copy Disclaimer</button>
+    <span class="copied-msg" id="copiedMsg">Copied!</span>
+  </div>
+  <script>
+    function copyDisclaimer() {
+      const text = document.getElementById('disclaimerText').innerText + '\n\n#EntertainmentOnly #Satire #Parody #NoHarmIntended';
+      navigator.clipboard.writeText(text).then(function() {
+        document.getElementById('copiedMsg').style.display = 'inline';
+        setTimeout(function() {
+          document.getElementById('copiedMsg').style.display = 'none';
+        }, 1800);
+      });
+    }
+  </script>
+</body>
+</html> 
